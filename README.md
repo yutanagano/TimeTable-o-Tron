@@ -30,7 +30,7 @@ headers which *strictly* follow the below format:
 > The table contents do not have to be in a particular format. Only the headers
 > have to follow the above format.
 
-## Program behaviour
+## More on program behaviour
 
 The program will use the values in the "Number" column to attempt to uniquely
 identify patients. This meanst that for a row to be filled out, its "Number"
@@ -47,6 +47,17 @@ based on what it can find from the patient's most recent records.
 - TMs
 
 > This means that the "Time" and "F2F/TC" columns will never be filled.
+
+### ***IMPORTANT***: How the program decides what information is "recent"
+
+When reading through the old patient records, the program will decide which
+data is most recent based on the name of the timetable. That is, the program
+will sort the contents of the old records directory alphabetically, and assume
+that the files that end up at the bottom are the most recent. This is because,
+given a YYYY-MM-DD or similar naming format for the old timetables, the file
+names corresponding to the latest dates will be sorted to the bottom. So, to
+preserve the behaviour of the program retreiving the most recent information,
+please make sure that the old record timetables are named in this way.
 
 ## Installation
 
